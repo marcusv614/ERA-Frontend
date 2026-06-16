@@ -1,0 +1,117 @@
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e7eeeb;
+  padding: 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  color: #66746f;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table strong,
+.table span {
+  display: block;
+}
+
+.table span {
+  margin-top: 4px;
+  color: #66746f;
+  font-size: 0.88rem;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.secondaryButton,
+.dangerButton {
+  border: 0;
+  border-radius: 8px;
+  font-weight: 800;
+  padding: 9px 11px;
+}
+
+.secondaryButton {
+  background: #edf4f1;
+  color: #1f3d34;
+}
+
+.dangerButton {
+  background: #fff0ed;
+  color: #a43a24;
+}
+
+@media (max-width: 700px) {
+  .tableWrap {
+    border: 0;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .table {
+    min-width: 0;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 12px;
+    border: 1px solid #dce5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 12px;
+  }
+
+  .table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 1px solid #edf3f0;
+    padding: 10px 0;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    color: #66746f;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}

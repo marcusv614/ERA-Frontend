@@ -1,0 +1,102 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  background: #f4f7f6;
+  padding: 24px;
+}
+
+.panel {
+  display: grid;
+  width: min(920px, 100%);
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.copy {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  background: #19342c;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.eyebrow {
+  color: #a9c7bd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.copy h1,
+.copy p {
+  margin: 0;
+}
+
+.copy h1 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.copy p {
+  color: #d7e4df;
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 40px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  color: #33443e;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid #cbd8d3;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.button {
+  border: 0;
+  border-radius: 8px;
+  background: #1f6f5b;
+  color: #ffffff;
+  font-weight: 800;
+  padding: 12px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.error {
+  margin: 0;
+  border-radius: 8px;
+  background: #fff0ed;
+  color: #a43a24;
+  padding: 10px 12px;
+}
+
+@media (max-width: 760px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+
+  .copy,
+  .form {
+    padding: 28px;
+  }
+}
